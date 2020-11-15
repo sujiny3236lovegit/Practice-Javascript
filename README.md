@@ -34,4 +34,23 @@
       * head + async: boolean타입의 속성값으로, 병렬로 js파일을 다운로드**해놓은 뒤** html파일을 읽는다. querySelector를 이용해 DOM요소를 조작하려고 하는 시점에서 HTML요소가 아직 정의되어있지 않아 위험할 수도 있고, html을 parsing하는 동안에 js를 실행하기 위해 멈출 수가 있다. 만일 나의 웹사이트가 js파일들의 순서에 의존적이라면 데이터가 작아 먼저 다운로드 받아진 js가 실행되어지게 된다.
       * head + defer: html을 parsing하는 동안 defer옵션을 보면 다운로드 **명령만 해놓은 뒤** 나머지 html을 끝까지 parsing한다. 그리고 parsing이 끝난 다음 다운로드 되어진 js를 실행하게 된다. defer은 html parsing 후 다운로드 받아진 순서대로 실행하므로 내가 정의한 순서에 맞춰서 js가 실행되어 진다. 
 * 순수 바닐라JS를 사용할때면 **'use strict'**작성해 JS의 유연함에 따라오는 위험성을 줄인다.
+* 프로그래밍에서 가장 중요한 것: 1.입력 2.연산 3.출력 
+  * 사용자에게 console이나 UI에서 데이터를 입력받음
+  * 입력받은 데이터를 잘 처리하고 연산함
+  * 알맞게 사용자에게 출력해서 보여줌
+  * ++ 받아온 데이터를 서버로 전송하고 받아오는 것도 중요하다.
+* Variable(변수)
+  * **var**
+    * var hoisting으로 인해 값이 없어도 가장 상위로 선언되어 진다.
+    * block scope라는 개념이 존재하지 않는다. (그 어떤 함수에도 접근이 가능해져 버림)
+* Constance(상수)
+  * 포인터가 잠겨서 선언함과 동시에 절대로 값을 변경할 수 없다.
+  * Mutable datatype: 변경이 가능함 => let
+  * Immutable datatype: 변경이 불가능함 => const 
+    - 보안상의 문제가 발생할 수 있으므로 const를 사용해 프로그래밍을 작성하는 것이 중요하다. 
+* Variable types
+  * primitive, single item(더이상 작은 단위로 나뉠 수 없는 한가지의 아이템)
+    - number, string, boolean, null, undefinend, symble...
+  * object, box container
+  * function, first-class function
   
