@@ -67,6 +67,11 @@
   * null: 말그대로 아무것도 아닌, 텅텅비어진 
   * undefined: 변수는 지정되었지만 값이 할당 되어있지 않은
   * symbol
-
 * Dynamic typing: dynamically typed language
 * TypeScript: 자바스크립트 위에 타입이 더 올려진 언어 
+* **Function**
+  * 함수도 프로그램 안에서 각각의 작은 단위의 기능들을 수행하므로 함수는 sub-program이라고도 불린다.
+  * 함수는 Input인 parameter를 받아와 잘 처리한 후 Output인 return을 하는 것이 function(함수)이다.
+    - 함수는 input과 output이 중요하며, function의 이름을 잘 정의하는 것이 중요하다.
+  * 하나의 함수는 한가지의 일만 한다.
+*    
