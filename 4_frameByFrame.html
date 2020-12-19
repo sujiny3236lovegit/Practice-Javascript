@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive-web</title>
+  <style>
+    /* 
+    gif는 투명도문제로 바탕화면 색을 입힐경우 이미지 테투리가 지저분하게 남을 수 있다.
+    apng는 현재 지원하지 않는 브라우저가 많이 있다.
+     */
+    body{
+      background: #222;
+    }
+    @keyframes spaceship-ani{
+      /* from{
+
+      } */
+      to{
+        background-position: -2550px 0;
+      }
+    }
+  .spaceship{
+    /* 픽셀집적도를 위해 원이미지의 절반크기로 생성함(원이미지는 300px) */
+    width: 150px;
+    height: 150px;
+    background: url('images/sprite_spaceship.png') no-repeat 0 0 / auto 150px; /*0 0은 시작 위치 // width는 5100px이지만 한쪽만(300px)지정해주고 width를 auto로 해줘도됨*/
+    animation: spaceship-ani 1s infinite steps(17);
+  }
+  </style>
+</head>
+<body>
+  <div class="spaceship">
+
+  </div>
+</body>
+</html>

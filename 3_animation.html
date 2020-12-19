@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Web</title>
+  <link rel="stylesheet" href="css/default.css">
+  <style>
+    /* 애니메이션이 변화되는 지점: keyframes */
+    @keyframes sample-ani{
+      0%{
+        transform: translate(0,0);
+      }
+      50%{
+        /* background: red; */
+        transform: translate(300px, 0);
+      }
+      100%{
+        transform: translate(400px, 500px); /*x로 400, y로 500*/
+      }
+    }
+
+    .box{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+      height: 100px;
+      border: 2px solid #000;
+      background: #fff000;
+      /* animation: sample-ani 2s linear infinite alternate; 등속도와 무한, 교체 */
+      /* animation: sample-ani 2s linear 3; */
+      animation: samle-ani 2s linear forwards; /*forwards: ani가 끝난 지점에서 멈춤*/
+    }
+
+    .box:hover{
+      animation-play-state: paused; /*hover될시에만 paused됨*/
+    }
+  </style>
+</head>
+<body>
+  <h1>Animation</h1>
+  <div class="box">BOX</div>
+</body>
+</html>
