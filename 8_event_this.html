@@ -27,13 +27,15 @@
     // 전역 변수
     (function(){
       // window.addEventListener('DOMContentLoaded', ()=>{
-        const ilbuni = document.querySelector('.charact');
+        const characters = document.querySelector('.characters');
 
-        function clickIlbuniHandler(){
-          ilbuni.classList.toggle('special');
+        function clickHandler(e){
+          // console.log(this);
+          // console.log(e.currentTarget);
+          console.log(e.target);
         }
 
-        ilbuni.addEventListener('click', clickIlbuniHandler);
+        characters.addEventListener('click', clickHandler);
       // });
     })();
   </script>
