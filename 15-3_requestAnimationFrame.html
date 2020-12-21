@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .btn{
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="btn">취소</div>
+  <script>
+    let tiemId;
+    let n = 0;
+    const btn = document.querySelector('.btn');
+
+    function sample(){
+      n++;
+      if(n > 200){
+        return;
+      }
+      timeId = requestAnimationFrame(sample);
+    };
+
+    sample();
+
+    btn.addEventListener('click', function(){
+      cancelAnimationFrame(timeId);
+    });
+
+  </script>
+</body>
+</html>
