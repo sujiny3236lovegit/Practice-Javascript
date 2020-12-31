@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background-color: black;
+    }
+    .box1{
+      width: 100px;
+      height: 100px;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 5px;
+      background-color: thistle;
+    }    
+    .box2{
+      width: 100px;
+      height: 100px;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 5px;
+      background-color: thistle;
+    }    
+    .box3{
+      width: 100px;
+      height: 100px;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 5px;
+      background-color: thistle;
+    }    
+    .box4{
+      width: 100px;
+      height: 100px;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 5px;
+      background-color: thistle;
+    }    
+    .box5{
+      width: 100px;
+      height: 100px;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 5px;
+      background-color: thistle;
+    }    
+    .box6{
+      width: 100px;
+      height: 100px;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 5px;
+      background-color: purple;
+    }    
+    .box7{
+      width: 100px;
+      height: 100px;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 5px;
+      background-color: thistle;
+    }    
+    .box8{
+      width: 100px;
+      height: 100px;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 5px;
+      background-color: thistle;
+    }    
+    aside{
+      position: fixed;
+      top: 0;
+      right: 0;
+    }
+    button{
+      background-color: gray;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+    <div class="box7"></div>
+    <div class="box8"></div>
+    <aside>
+      <button class="scrollBy">scroll by 100px(y)</button>
+      <button class="scrollTo">scroll to 100px(y)</button>
+      <button class="scrollInto">scroll into box6</button>
+    </aside> 
+  <script>
+    const box6 = document.querySelector('.box6');
+    const scrollBy = document.querySelector('.scrollBy');
+    const scrollTo = document.querySelector('.scrollTo');
+    const scrollInto = document.querySelector('.scrollInto');
+  
+    box6.addEventListener('click', clickBox);
+    function clickBox(e){
+      console.log(e.screenX, e.screenY);
+      console.log(e.clientX, e.clientY);
+    };
+
+    scrollBy.addEventListener('click', (event)=>{
+      window.scrollBy({
+        top: 100,
+        left: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    scrollTo.addEventListener('click', (event)=>{
+      window.scrollTo(0, 100);
+    });
+
+    scrollInto.addEventListener('click', (event)=>{
+      box6.scrollIntoView();
+    });
+
+    // const box6 = document.querySelector('.box6');
+    // const rect = box6.getBoundingClientRect();
+    // // const clientX = clientRect.left;
+    // // const clientY = clientRect.top;
+    // document.addEventListener('click', ()=>{
+    //   box6.getBoundingClientRect();
+    //   console.log(box6.screenX, box6.screenY);
+    //   console.log(box6.clientX, box6.clientY);
+    // });
+  </script>
+</body>
+</html>
