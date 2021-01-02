@@ -16,7 +16,7 @@ function onAdd(){
   items.appendChild(item);
 
   // 4. 새로 추가된 아이템으로 스크롤링 한다. (stress test)
-  item.scrollIntoView(item);
+  item.scrollIntoView({block: 'center'});
 
   // 5. input을 초기화 한다.
   input.value = '';
@@ -24,21 +24,21 @@ function onAdd(){
 }
 
 function createItem(text){
-  const itemRow = document.querySelector('li');
+  const itemRow = document.createElement('li');
   itemRow.setAttribute('class', 'item__row');
 
-  const item = document.querySelector('div');
+  const item = document.createElement('div');
   item.setAttribute('class', 'item');
 
-  const name = document.querySelector('span');
+  const name = document.createElement('span');
   name.setAttribute('class', 'item__name');
   name.innerText = text;
 
-  const deleteBtn = document.querySelector('button');
+  const deleteBtn = document.createElement('button');
   deleteBtn.setAttribute('class', 'item__delete');
   deleteBtn.innerHTML = '<i class="fas fa-trash-alt"></i>';
   deleteBtn.addEventListener('click', ()=>{
-    deleteBtn.removeChild(itemRow);
+    itemRow.remove();
   });
 
   const itemDivider = document.createElement('div');
