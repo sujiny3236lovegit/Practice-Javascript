@@ -39,6 +39,15 @@ var data = {                  // 객체에 두 프로퍼티가 있다.
 ```
 
 ```javascript
+var name = "Peter";
+var number = 200;
+var isTrue = true;
+var nothing = null;
+var empty = undefined;
+var list = [];
+var ref = {};
+var func = function(){}
+
 
 ```
 
