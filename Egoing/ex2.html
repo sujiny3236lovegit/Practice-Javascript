@@ -7,14 +7,40 @@
 </head>
 <body>
   <h1><a href="index.html">WEB</a></h1>
-  <input type="button" value="night" onclick="
+  <!-- <input type="button" value="night" onclick="
     document.querySelector('body').style.backgroundColor = 'black';
     document.querySelector('body').style.color = 'white';
   ">
   <input type="button" value="day" onclick="
   document.querySelector('body').style.backgroundColor = 'white';
   document.querySelector('body').style.color = 'black';
-">
+  "> -->
+  <input type="button" value="night" onclick="
+  let target = document.querySelector('body');
+  if(this.value ==='night'){
+    target.style.backgroundColor = 'black';
+    target.style.color = 'white';
+    this.value = 'day';
+
+    let links = document.querySelector('a');
+    let i = 0;
+    while(i < links.length){
+      links[i].style.color = 'powderblue';
+      i = i + 1;
+    }
+  }else{
+    target.style.backgroundColor = 'white';
+    target.style.color = 'black';
+    this.value = 'night';
+
+    let links = document.querySelector('a');
+    let i = 0;
+    while(i < links.length){
+      links[i].style.color = 'blue';
+      i = i + 1;
+    }
+  }
+  ">
   <ol>
     <li><a href="#">HTML</a></li>
     <li><a href="#">CSS</a></li>
@@ -22,5 +48,29 @@
   </ol>
   <h2>Javascript</h2>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto officia aperiam consequuntur mollitia animi corrupti. Labore quod repudiandae facilis quia odit. Nihil repellat earum voluptatem aut! Asperiores, est ducimus?</p>
+
+  <input type="button" value="night" onclick="
+  if(this.value ==='night'){
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+    this.value = 'day';
+  }else{
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+    this.value = 'night';
+  }
+  ">
+
+  <input type="button" value="black" onclick="
+  if(this.value ==='night'){
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+    this.value = 'day';
+  }else{
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+    this.value = 'night';
+  }
+  ">
 </body>
 </html>
